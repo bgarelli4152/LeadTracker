@@ -11,7 +11,7 @@ namespace LeadTracker.Services
 {
     public class RepService
     {
-        public bool CreateLead(RepCreate model)
+        public bool CreateRep(RepCreate model)
         {
             var entity =
                 new Rep()

@@ -171,6 +171,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LeadController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RepController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -240,6 +241,11 @@
     <Content Include="Views\Lead\Details.cshtml" />
     <Content Include="Views\Lead\Edit.cshtml" />
     <Content Include="Views\Lead\Delete.cshtml" />
+    <Content Include="Views\Rep\Index.cshtml" />
+    <Content Include="Views\Rep\Details.cshtml" />
+    <Content Include="Views\Rep\Edit.cshtml" />
+    <Content Include="Views\Rep\Create.cshtml" />
+    <Content Include="Views\Rep\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
