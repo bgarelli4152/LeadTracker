@@ -86,5 +86,28 @@ namespace LeadTracker.WebMVC.Controllers
 
             return RedirectToAction("Index");
         }
+        
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var service = new LeadService();
+            var model = service.GetLeadByID(id);
+
+            return View(model);
+        }
+        
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = new LeadService();
+
+            service.DeleteLead(id);
+
+            TempData["SaveResult"] = "Your lead was deleted";
+
+            return RedirectToAction("Index");
+        }
     }
 }
