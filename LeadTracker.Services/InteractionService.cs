@@ -18,7 +18,8 @@ namespace LeadTracker.Services
                     RepID = model.RepID,
                     TypeOfContact = model.TypeOfContact,
                     Description = model.Description,
-                    CreatedUtc = DateTimeOffset.Now
+                    CreatedUtc = DateTimeOffset.Now,
+                    ModifiedUtc = DateTimeOffset.Now
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -90,7 +91,7 @@ namespace LeadTracker.Services
 
                 entity.TypeOfContact = model.TypeOfContact;
                 entity.Description = model.Description;
-                entity.ModifiedUtc = model.ModifiedUtc;
+                entity.ModifiedUtc = DateTimeOffset.Now;
 
                 return ctx.SaveChanges() == 1;
             }
