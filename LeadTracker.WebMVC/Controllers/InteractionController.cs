@@ -32,5 +32,12 @@ namespace LeadTracker.WebMVC.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult Details(int id)
+        {
+            var service = new InteractionService();
+            var model = service.GetInteractionById(id);
+            return View(model);
+        }
     }
 }

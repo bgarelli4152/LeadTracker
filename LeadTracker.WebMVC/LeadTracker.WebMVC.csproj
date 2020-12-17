@@ -249,6 +249,7 @@
     <Content Include="Views\Rep\Delete.cshtml" />
     <Content Include="Views\Interaction\Index.cshtml" />
     <Content Include="Views\Interaction\Create.cshtml" />
+    <Content Include="Views\Interaction\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
